@@ -48,9 +48,15 @@
                 <select id="unit">
                     <option value="cup">Cup</option>
                     <option value="teaspoon">Teaspoon</option>
-                    <option value="ounces">Tablespoon</option>
+                    <option value="ounces">Ounces</option>
                     <option value="tablespoon">Tablespoon</option>
-                    <option value="Fluid">Fluid Ounces</option>
+                </select>
+                <label for="unit">To</label>
+                <select id="output-unit">
+                    <option value="cup">Cup</option>
+                    <option value="teaspoon">Teaspoon</option>
+                    <option value="ounces">Ounces</option>
+                    <option value="tablespoon">Tablespoon</option>
                 </select>
             </div>
             <button id="convert-btn">Convert</button>
@@ -58,7 +64,7 @@
         <div class="result">
             <p>Result: <span id="conversion-result"></span></p>
         </div>
-    </section>
+    </section>    
 
     <section  class="basic" id="basic">
         <h1 class="heading"> <span>SOME BASIC </span>CONVERSIONS</h1>
@@ -161,5 +167,46 @@
         <p>ALL WE KNEAD</p>
         <p>&copy; 2023 All We Knead. All rights reserved.</p>
     </footer>
+    <script>
+        const convertBtn = document.getElementById('convert-btn');
+        convertBtn.addEventListener('click', convertMeasurement);
+
+        function convertMeasurement() {
+            const measurement = parseFloat(document.getElementById('measurement').value);
+            const unit = document.getElementById('unit').value;
+            const outputUnit = document.getElementById('output-unit').value;
+
+            let result;
+            if (unit === 'cup' && outputUnit === 'teaspoon') {
+                result = measurement * 48;
+            } else if (unit === 'cup' && outputUnit === 'ounces') {
+                result = measurement * 8;
+            } else if (unit === 'cup' && outputUnit === 'tablespoon') {
+                result = measurement * 16;
+            } else if (unit === 'teaspoon' && outputUnit === 'cup') {
+                result = measurement / 48;
+            } else if (unit === 'teaspoon' && outputUnit === 'ounces') {
+                result = measurement / 6;
+            } else if (unit === 'teaspoon' && outputUnit === 'tablespoon') {
+                result = measurement / 3;
+            } else if (unit === 'ounces' && outputUnit === 'cup') {
+                result = measurement / 8;
+            } else if (unit === 'ounces' && outputUnit === 'teaspoon') {
+                result = measurement * 6;
+            } else if (unit === 'ounces' && outputUnit === 'tablespoon') {
+                result = measurement * 2;
+            } else if (unit === 'tablespoon' && outputUnit === 'cup') {
+                result = measurement / 16;
+            } else if (unit === 'tablespoon' && outputUnit === 'teaspoon') {
+                result = measurement * 3;
+            } else if (unit === 'tablespoon' && outputUnit === 'ounces') {
+                result = measurement / 2;
+            } else {
+                result = measurement;
+            }
+            const conversionResult = document.getElementById('conversion-result');
+            conversionResult.textContent = result;
+        }
+    </script>
 </body>
 </html>
