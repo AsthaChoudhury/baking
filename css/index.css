@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&family=Luckiest+Guy&family=Pacifico&family=Purple+Purse&family=Yellowtail&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', cursive;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #c1b7b5;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center ;
+    font-size: 4rem;
+    padding: 2rem 25%;
+    color: var(--blue);
+    font-family: 'Yellowtail', cursive;
+    background: rgba(139, 197, 214, 0.2);
+
+}
+
+.equiv{
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem 9%;
+    text-decoration: underline;
+    font-family: 'Yellowtail', cursive;
+    color:#303a47;
+    margin-bottom: 2rem;
+    font-weight: 700; 
+}
+
+.header {
+    min-height: 33.33vh;
+    width: 100%;
+    position: fixed;
+    background: #9bdbe4;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.header .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.logo {
+    position: relative;
+    min-height: 100vh;
+}
+
+.logo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.logo .logo-text {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-40%, -50%);
+    text-align: right;
+    color: #fff;
+}
+
+.logo .logo-text span {
+    font-size: 2.5rem;
+}
+
+
+.logo .logo-text h3 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+}
+
+.logo .logo-text p {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-family: 'Pacifico', cursive;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.about .row .image-container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .image-container img {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.about .row .image-container .image-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.about .row .image-container h3 {
+    font-size: 3rem;
+    margin-bottom: rem;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content .larger-text {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: #2e2d36;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.convert .heading {
+    font-family: 'Pacifico', cursive;
+}
+
+
+.convert .conversion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.convert .conversion-form .input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.convert .conversion-form label {
+    font-size: 2rem;
+    color: var(--blue);
+    font-weight: bold;
+    font-family: 'Purple Purse', cursive;
+}
+
+.convert .conversion-form input {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 20rem;
+}
+
+.convert .conversion-form select {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 20rem;
+}
+
+.convert .conversion-form button {
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--blue);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.convert .conversion-form button:hover {
+    background-color: #4a90e2;
+}
+
+.convert .result {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 2rem;
+    font-family: 'Purple Purse', cursive;
+}
+
+.convert .result p{
+    font-family: 'Purple Purse', cursive;
+}
+
+.basic, .metric {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 2rem;
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+    align-items: center;
+}
+
+.basic  .division, .metric .division{
+    flex: 1 1 40rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 2rem;
+    color: #303a47;
+    font-family: 'Purple Purse', cursive;
+}
+
+.basic p,.metric p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Purple Purse', cursive;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.basic .image-container, .metric .image-container{
+    flex: 1 1 40rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.basic .image-container img , .metric .image-container img{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.metric .division .head,
+ .basic .division .head{
+    flex: 1 1 40rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 3rem;
+    color: #303a47;
+    font-family: 'Purple Purse', cursive;   
+}
+
+footer {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .logo {
+        background-position: left;
+    }
+    .basic {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+    
+      .basic .image-container {
+        align-self: center;
+      }
+}
